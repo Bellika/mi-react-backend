@@ -11,6 +11,8 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 
+app.use('/api/users', require('./routes/userRoutes'))
+
 app.get('/api/hello', (req, res) => {
   res.json({ message: "Hello"})
 })
